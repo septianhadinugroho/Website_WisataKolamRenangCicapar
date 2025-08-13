@@ -94,6 +94,9 @@ export default function Footer() {
           <p className="text-gray-500 text-xs mt-2">
             Mata air alami sejak zaman kolonial • Terjaga kelestariannya untuk generasi mendatang
           </p>
+          <p className="text-gray-600 text-xs mt-4 italic">
+            Website ini dibuat oleh KKN Sisdamas Kelompok 125 UIN Sunan Gunung Djati Bandung
+          </p>
         </motion.div>
       </div>
     </footer>

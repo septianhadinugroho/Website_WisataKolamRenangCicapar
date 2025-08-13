@@ -8,6 +8,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.ico',
+  },
   title: "Wisata Kolam Renang Cicapar - Mata Air Alami Garut",
   description: "Kolam renang mata air alami di jantung Kota Garut. Nikmati pengalaman berenang yang menyegarkan dengan fasilitas lengkap dan harga terjangkau.",
   keywords: "kolam renang garut, wisata air garut, cicapar, mata air alami, wisata keluarga",
