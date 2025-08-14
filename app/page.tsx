@@ -12,6 +12,7 @@ import Pricing from "@/components/sections/pricing"
 import Advantages from "@/components/sections/advantages"
 import Contact from "@/components/sections/contact"
 import Footer from "@/components/sections/footer"
+import ScrollToTopButton from "@/components/ui/scroll-to-top-button"
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Pricing />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
     </div>
   )
 }

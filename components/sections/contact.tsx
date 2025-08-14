@@ -61,24 +61,24 @@ export default function Contact() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-12 md:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
             Hubungi Kami
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             Butuh informasi lebih lanjut? Jangan ragu untuk menghubungi kami
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
           {contactInfo.map((info, index) => (
             <motion.div
               key={info.title}
@@ -88,14 +88,14 @@ export default function Contact() {
               viewport={{ once: true }}
             >
               <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <CardContent className="p-6 text-center">
-                  <info.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">{info.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{info.content}</p>
+                <CardContent className="p-4 md:p-6 text-center">
+                  <info.icon className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mx-auto mb-3 md:mb-4" />
+                  <h3 className="text-base md:text-lg font-bold text-gray-800 mb-2">{info.title}</h3>
+                  <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed">{info.content}</p>
                   <Button
                     variant="outline"
                     size="sm"
-                    className="text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white"
+                    className="text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white text-xs md:text-sm w-full"
                     onClick={() => handleActionClick(info.action, info.content)}
                   >
                     {info.action}
@@ -111,13 +111,13 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           <Card className="border-0 shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Lokasi Kami</h3>
+            <CardContent className="p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">Lokasi Kami</h3>
               {/* === BAGIAN PETA YANG DIGANTI === */}
-              <div className="aspect-video rounded-lg overflow-hidden mb-6">
+              <div className="aspect-video rounded-lg overflow-hidden mb-4 md:mb-6">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1443022492895!2d107.89805887456494!3d-7.109270492894205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b7b3c1aa8a3f%3A0xcdf7f23af589c50f!2sKolam%20Renang%20Cicapar!5e0!3m2!1sen!2sid!4v1755001886023!5m2!1sen!2sid"
                   width="100%"
@@ -129,7 +129,7 @@ export default function Contact() {
                 ></iframe>
               </div>
               <Button
-                className="w-full bg-blue-600 hover:bg-blue-700"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-sm md:text-base"
                 onClick={() => window.open(googleMapsUrl, "_blank")}
               >
                 <Navigation className="w-4 h-4 mr-2" />
@@ -139,15 +139,15 @@ export default function Contact() {
           </Card>
 
           <Card className="border-0 shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Pesan Cepat</h3>
-              <div className="space-y-4">
-                <p className="text-gray-600">
+            <CardContent className="p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">Pesan Cepat</h3>
+              <div className="space-y-3 md:space-y-4">
+                <p className="text-gray-600 text-sm md:text-base">
                   Hubungi kami melalui WhatsApp untuk informasi lebih cepat dan reservasi grup.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   <Button
-                    className="w-full bg-green-600 hover:bg-green-700"
+                    className="w-full bg-green-600 hover:bg-green-700 text-sm md:text-base"
                     onClick={() => handleActionClick("Chat WhatsApp", "")}
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
@@ -155,15 +155,15 @@ export default function Contact() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full"
+                    className="w-full text-sm md:text-base"
                     onClick={() => handleActionClick("Hubungi", "")}
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Telepon Langsung
                   </Button>
                 </div>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <p className="text-sm text-blue-800">
+                <div className="bg-blue-50 p-3 md:p-4 rounded-lg">
+                  <p className="text-xs md:text-sm text-blue-800">
                     <strong>Tips:</strong> Untuk kunjungan rombongan, disarankan untuk menghubungi kami terlebih dahulu.
                   </p>
                 </div>

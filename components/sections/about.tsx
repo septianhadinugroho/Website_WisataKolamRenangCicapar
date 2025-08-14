@@ -33,27 +33,27 @@ export default function About() {
   }, [images.length])
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-12 md:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
             Tentang Cicapar
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
             Mata air alami yang telah mengalir sejak zaman kolonial Belanda, kini menjadi destinasi wisata kebanggaan Desa Leles
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <motion.div {...fadeInUp} className="space-y-6">
-            <h3 className="text-3xl font-bold text-gray-800">Sejarah & Makna Nama</h3>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+          <motion.div {...fadeInUp} className="space-y-4 md:space-y-6 order-2 md:order-1">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800">Sejarah & Makna Nama</h3>
+            <div className="space-y-3 md:space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
               <p>
                 <strong className="text-blue-600">Cicapar</strong> berasal dari kata "cai" (air) dan "capar" yang menggambarkan mata air yang berada di tengah-tengah pemukiman warga.
               </p>
@@ -71,7 +71,7 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative overflow-hidden rounded-2xl shadow-2xl"
+            className="relative overflow-hidden rounded-2xl shadow-2xl order-1 md:order-2 h-64 md:h-auto"
           >
             <motion.img
               key={currentIndex}
@@ -85,7 +85,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,10 +93,10 @@ export default function About() {
             viewport={{ once: true }}
           >
             <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <Calendar className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Sejak 1980</h4>
-                <p className="text-gray-600">Dikelola pemerintah desa sebagai aset masyarakat</p>
+              <CardContent className="p-6 md:p-8 text-center">
+                <Calendar className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">Sejak 1980</h4>
+                <p className="text-gray-600 text-sm md:text-base">Dikelola pemerintah desa sebagai aset masyarakat</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -108,10 +108,10 @@ export default function About() {
             viewport={{ once: true }}
           >
             <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-gray-800 mb-3">BUMDES</h4>
-                <p className="text-gray-600">Dikelola oleh Badan Usaha Milik Desa untuk kesejahteraan masyarakat</p>
+              <CardContent className="p-6 md:p-8 text-center">
+                <Users className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">BUMDES</h4>
+                <p className="text-gray-600 text-sm md:text-base">Dikelola oleh Badan Usaha Milik Desa untuk kesejahteraan masyarakat</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -123,10 +123,10 @@ export default function About() {
             viewport={{ once: true }}
           >
             <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <Droplets className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Mata Air Alami</h4>
-                <p className="text-gray-600">Sumber air bawah tanah yang tidak pernah surut</p>
+              <CardContent className="p-6 md:p-8 text-center">
+                <Droplets className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">Mata Air Alami</h4>
+                <p className="text-gray-600 text-sm md:text-base">Sumber air bawah tanah yang tidak pernah surut</p>
               </CardContent>
             </Card>
           </motion.div>
