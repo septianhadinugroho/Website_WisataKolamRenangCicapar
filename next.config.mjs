@@ -6,9 +6,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
+  // Hapus atau set `unoptimized` ke false
+  // images: {
+  //   unoptimized: true,
+  // },
 }
 
 export default nextConfig
