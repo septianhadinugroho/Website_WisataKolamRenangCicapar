@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://website-wisatakolamrenangcicapar.vercel.app/sitemap.xml
+Sitemap: https://wisata-kolamrenangcicapar.vercel.app/sitemap.xml

@@ -9,7 +9,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800", "900"]
 });
 
-const siteUrl = "https://website-wisatakolamrenangcicapar.vercel.app";
+const siteUrl = "https://wisata-kolamrenangcicapar.vercel.app";
 
 export const metadata: Metadata = {
   title: "Wisata Kolam Renang Cicapar - Mata Air Alami Garut",
@@ -56,8 +56,8 @@ const jsonLd = {
   "telephone": "+6283133074707",
   "email": "bumdeslestari99@gmail.com",
   "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 08:00-17:00",
-  "image": "https://website-wisatakolamrenangcicapar.vercel.app/kolam1.png",
-  "url": "https://website-wisatakolamrenangcicapar.vercel.app"
+  "image": "https://wisata-kolamrenangcicapar.vercel.app/kolam1.png",
+  "url": "https://wisata-kolamrenangcicapar.vercel.app"
 };
 
 export default function RootLayout({
